@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, (error) => {
         console.log("User denied the location access", error);
+        document.querySelector("#wrapper-1 .container").style.display = "none";
       });
     } else {
       console.log("Geolocation is not supported by this browser.");
